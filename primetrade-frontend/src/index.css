@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #f4f6f8;
+}
+
+/* 👇 CENTER EVERYTHING */
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+button.primary {
+  background: #2563eb;
+  color: white;
+}
+
+button.danger {
+  background: #dc2626;
+  color: white;
+}
+
+button.small {
+  width: auto;
+  padding: 6px 10px;
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+button.cross {
+  background: #f4f1f1;
+  color: #dc2626;
+  width: auto;
+  padding: 6px 10px;
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.logout {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
