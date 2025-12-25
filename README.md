@@ -11,6 +11,20 @@ JWT-based authentication is stateless, which allows the application to scale hor
 In the future, the system can be split into separate microservices (for example, authentication and task services).  
 Performance can be improved by adding Redis caching for frequently accessed data, and the application can be containerized using Docker and deployed using NGINX for better scalability and reliability.
 
+## 📘 API Documentation
+
+API documentation is provided using a Postman collection.
+
+### How to use:
+1. Open Postman
+2. Click **Import**
+3. Import the file:
+  docs/PrimeTrade.postman_collection.json
+4. Use the Login API to generate a JWT token
+5. All protected APIs use the token via Authorization header
+
+The collection includes request examples for authentication and task CRUD APIs.
+
 
 ## ✨ Features
 
