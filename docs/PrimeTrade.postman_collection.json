@@ -1,0 +1,258 @@
+{
+	"info": {
+		"_postman_id": "ed715caa-6841-4e54-8e8e-930cdaa7b4d4",
+		"name": "PrimeTrade",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41671619"
+	},
+	"item": [
+		{
+			"name": "Create New User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/api/auth/register",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"vishal@test.com\",\r\n  \"password\": \"vishal123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/auth/login\n",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"login\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "protected_route",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NGQ2MzMzY2QwMzBkYzNmNTYwZDAxYSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzY2NjgwMTM1LCJleHAiOjE3NjY3NjY1MzV9.IQrmd7Z8DSYmQ4iQFvOD1pr-Aj3cvHDNCRFrhxYHYZM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/dashboard",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"dashboard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NGQ2MzMzY2QwMzBkYzNmNTYwZDAxYSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzY2NjgwMTM1LCJleHAiOjE3NjY3NjY1MzV9.IQrmd7Z8DSYmQ4iQFvOD1pr-Aj3cvHDNCRFrhxYHYZM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"My first task\",\r\n  \"description\": \"Testing task creation API\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Task",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NGQ2MzMzY2QwMzBkYzNmNTYwZDAxYSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzY2NjgwMTM1LCJleHAiOjE3NjY3NjY1MzV9.IQrmd7Z8DSYmQ4iQFvOD1pr-Aj3cvHDNCRFrhxYHYZM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NGQ2MzMzY2QwMzBkYzNmNTYwZDAxYSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzY2NjgwMTM1LCJleHAiOjE3NjY3NjY1MzV9.IQrmd7Z8DSYmQ4iQFvOD1pr-Aj3cvHDNCRFrhxYHYZM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"completed\": true,\r\n  \"title\": \"Task completed 🎉\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/tasks/694d6ac0fd730c08aedc7d52",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tasks",
+						"694d6ac0fd730c08aedc7d52"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NGQ2MzMzY2QwMzBkYzNmNTYwZDAxYSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzY2NjgwMTM1LCJleHAiOjE3NjY3NjY1MzV9.IQrmd7Z8DSYmQ4iQFvOD1pr-Aj3cvHDNCRFrhxYHYZM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/tasks/694d6ac0fd730c08aedc7d52",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tasks",
+						"694d6ac0fd730c08aedc7d52"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
